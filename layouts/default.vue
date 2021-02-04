@@ -57,7 +57,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>LOVE SHOKO💛</span>
+      <v-spacer></v-spacer>
+      <span>FROM TOMOATSU</span>
     </v-footer>
   </v-app>
 </template>

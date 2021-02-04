@@ -1,6 +1,6 @@
 <template>
   <div>
-    Action page is developing now
+    Dashboard page is developing now
   </div>
 </template>
 
