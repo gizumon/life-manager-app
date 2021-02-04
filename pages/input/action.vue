@@ -26,7 +26,7 @@
               color="cyan"
             >
               <v-icon>mdi-pencil </v-icon>
-              <NuxtLink to="card.href"></NuxtLink>
+              <NuxtLink v-to="card.href"></NuxtLink>
             </v-btn>
             <v-spacer></v-spacer>
             <v-btn
@@ -37,7 +37,7 @@
               color="teal"
             >
               <v-icon>mdi-view-list</v-icon>
-              <NuxtLink to="card.href"></NuxtLink>
+              <NuxtLink v-to="card.href"></NuxtLink>
             </v-btn>
           </v-card-actions>
         </v-card>
