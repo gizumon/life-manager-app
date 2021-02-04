@@ -12,12 +12,13 @@
             :src="card.src"
             class="white--text align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="calc(100vh - 36px - 48px - 50px)"
+            height="calc(100vh - 36px - 48px)"
           >
-            <v-card-title v-text="card.title"></v-card-title>
+            <!-- <v-card-title v-text="card.title"></v-card-title> -->
           </v-img>
+          <NuxtLink to="card.href"></NuxtLink>
 
-          <v-card-actions>
+          <!-- <v-card-actions>
             <v-btn
               block
               small
@@ -26,8 +27,8 @@
               <v-icon>mdi-pencil </v-icon>
               <NuxtLink to="card.href"></NuxtLink>
             </v-btn>
-            <!-- <v-spacer></v-spacer> -->
-            <!-- <v-btn
+            <v-spacer></v-spacer>
+            <v-btn
               class="mx-2"
               fab
               dark
@@ -36,8 +37,8 @@
             >
               <v-icon>mdi-view-list</v-icon>
               <NuxtLink to="card.href"></NuxtLink>
-            </v-btn> -->
-          </v-card-actions>
+            </v-btn>
+          </v-card-actions> -->
         </v-card>
       </v-col>
     </v-row>
