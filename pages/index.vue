@@ -35,24 +35,24 @@ export default {
         title: 'Pay',
         src: 'https://i.postimg.cc/RVY35bL6/Pay.jpg',
         flex: 3,
-        href: '/input/pay',
+        href: '/input?type="pay"',
       },{
         type: 'todo',
         title: 'ToDo',
         src: 'https://i.postimg.cc/Jzz6y0fH/ToDo.jpg',
         flex: 3,
-        href: '/input/action?type="todo"',
+        href: '/input?type="todo"',
       },{
         type: 'tobuy',
         title: 'ToBuy',
         src: 'https://i.postimg.cc/J7qz3765/To-BUY.jpg',
         flex: 3,
-        href: '/input/action?type="buy"',
+        href: '/input?type="buy"',
       },{
         title: 'List',
         src: 'https://i.postimg.cc/j2xBqcKB/LIST.jpg',
         flex: 3,
-        href: '/dashboard',
+        href: '/view',
       },
       // {
       //   title: 'Album',

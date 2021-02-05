@@ -46,48 +46,53 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :absolute="!fixed" app>
-      <span>LOVE SHOKO💛</span>
+      <span>LOVE SHOKO♥</span>
       <v-spacer></v-spacer>
       <span>FROM TOMOATSU</span>
     </v-footer>
+    <!-- <v-bottom-navigation
+      v-model="value"
+      class="caption"
+      :background-color="color"
+      dark
+      shift
+    >
+      <v-btn>
+        <span >Pay</span>
+        <v-icon>mdi-money</v-icon>
+      </v-btn>
+      <v-btn>
+        <span>ToDo</span>
+        <v-icon>mdi-music-note</v-icon>
+      </v-btn>
+      <v-btn>
+        <span>ToBuy</span>
+        <v-icon>mdi-book</v-icon>
+      </v-btn>
+      <v-btn>
+        <span>View</span>
+        <v-icon>mdi-files</v-icon>
+      </v-btn>
+    </v-bottom-navigation> -->
   </v-app>
 </template>
 
+
+
 <script>
 export default {
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
-    }
+  data: () => ({ value: 1 }),
+  computed: {
+    color () {
+      switch (this.value) {
+        case 0: return 'blue-grey'
+        case 1: return 'teal'
+        case 2: return 'brown'
+        case 3: return 'indigo'
+        default: return 'blue-grey'
+      }
+    },
   },
 }
 </script>
