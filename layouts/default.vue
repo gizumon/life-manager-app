@@ -46,7 +46,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>LOVE SHOKO♥</span>
       <v-spacer></v-spacer>
       <span>FROM TOMOATSU</span>
