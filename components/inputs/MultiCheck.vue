@@ -20,7 +20,7 @@
           @change="update()"
         >
           <v-chip
-            v-for="data in config.data"
+            v-for="data in config.dataList"
             :key="data.name"
             :value="data"
           >

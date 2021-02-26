@@ -77,55 +77,55 @@ import SelectBox from '@/components/inputs/SelectBox.vue';
 import { IConfig } from '@/types/models.ts';
 
 const categoryData = [{
-    id: 'other',
-    name: '指定なし',
-    setting: [{
-      menber_id: '1',
-      ratio: 1.0
-    },{
-      menber_id: '2',
-      ratio: 1.0
-    }],
+  id: 'none',
+  name: '指定なし',
+  setting: [{
+    menber_id: '1',
+    ratio: 1.0
   },{
-    id: 'foods',
-    name: '飲食費',
-    setting: [{
-      menber_id: '1',
-      ratio: 1.0
-    },{
-      menber_id: '2',
-      ratio: 1.0
-    }],
+    menber_id: '2',
+    ratio: 1.0
+  }],
 },{
-    id: 'households',
-    name: '日用品',
-    setting: [{
-      menber_id: '1',
-      ratio: 1.0
-    },{
-      menber_id: '2',
-      ratio: 1.0
-    }],
+  id: 'foods',
+  name: '飲食費',
+  setting: [{
+    menber_id: '1',
+    ratio: 1.0
+  },{
+    menber_id: '2',
+    ratio: 1.0
+  }],
 },{
-    id: 'hobbies',
-    name: '趣味',
-    setting: [{
-      menber_id: '1',
-      ratio: 1.0
-    },{
-      menber_id: '2',
-      ratio: 1.0
-    }],
+  id: 'households',
+  name: '日用品',
+  setting: [{
+    menber_id: '1',
+    ratio: 1.0
+  },{
+    menber_id: '2',
+    ratio: 1.0
+  }],
 },{
-    id: 'furnitures',
-    name: '家具・家電',
-    setting: [{
-      menber_id: '1',
-      ratio: 1.0
-    },{
-      menber_id: '2',
-      ratio: 1.0
-    }],
+  id: 'hobbies',
+  name: '趣味',
+  setting: [{
+    menber_id: '1',
+    ratio: 1.0
+  },{
+    menber_id: '2',
+    ratio: 1.0
+  }],
+},{
+  id: 'furnitures',
+  name: '家具・家電',
+  setting: [{
+    menber_id: '1',
+    ratio: 1.0
+  },{
+    menber_id: '2',
+    ratio: 1.0
+  }],
 },]
 
 export default Vue.extend({
@@ -149,9 +149,9 @@ export default Vue.extend({
           id: 'price',
           name: '金額',
           type: 'number',
-          placeholder: '2,000',
+          placeholder: 'ex) 2,000',
           icon: 'mdi-cash-100',
-          model: 0,
+          model: null,
           validates: [{
             type: 'isNotNull'
           },{
@@ -168,23 +168,23 @@ export default Vue.extend({
           validates: [{
             type: 'isNotNull'
           }],
-          data: (this as any).members || []
+          dataList: (this as any).members || []
         },{
           id: 'category',
           name: 'カテゴリ',
           type: 'select',
-          placeholder: '-- どんな --',
+          placeholder: '-- カテゴリ --',
           icon: 'mdi-help-box',
-          model: '{{CATEGORY_ID}}',
+          model: 'none',
           validates: [],
-          data: categoryData
+          dataList: categoryData
         },{
           id: 'memo',
           name: '備考',
           type: 'text',
           placeholder: 'ex) コンビニ',
           icon: 'mdi-tooltip-edit',
-          model: '',
+          model: null,
           validates: [ ],
           args: []
         },{
@@ -300,7 +300,7 @@ export default Vue.extend({
     console.log((this as any).members);
     this.configs.forEach((config: any) => config.inputs.forEach((input: any) => {
       if (input.id === 'payedFor') {
-        input.data = (this as any).members;
+        input.dataList = (this as any).members;
         input.model = (this as any).members;
       }})
     );

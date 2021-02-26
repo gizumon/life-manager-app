@@ -17,7 +17,6 @@
         :type="config.type"
         :label="config.placeholder"
         dense
-        autofocus
         hide-details
         class="caption"
         @change="update()"

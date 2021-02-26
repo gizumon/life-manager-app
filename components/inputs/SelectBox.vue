@@ -10,7 +10,7 @@
       class="my-0 pa-2"
     >
       <v-select
-        :items="config.data.map(data => data.name)"
+        :items="config.dataList.map(data => data.name)"
         :label="config.placeholder"
         solo
         dense
@@ -31,6 +31,16 @@ import { IInput } from '@/types/models.ts';
 export default Vue.extend({
   props: {
     config: Object as PropType<IInput>
+  },
+  computed: function() {
+    items: {
+      return this.config.dataList?.map(data => {
+        return {
+          value: data.id,
+          text: data.name,
+        }
+      });
+    }
   },
   methods: {
     update: function() {
