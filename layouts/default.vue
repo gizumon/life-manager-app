@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -46,10 +46,23 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
-      <span>LOVE SHOKO♥</span>
+    <v-footer app height="36px" class="footer">
+      <span class="caption">LOVE SHOKO♡</span>
       <v-spacer></v-spacer>
-      <span>FROM TOMOATSU</span>
+      <v-btn
+        class="mx-2"
+        fab
+        dark
+        x-small
+        color="teal"
+        @click="goToHome()"
+      >
+        <v-icon dark>
+          mdi-home
+        </v-icon>
+      </v-btn>
+      <v-spacer></v-spacer>
+      <span class="caption">FROM TOMOATSU</span>
     </v-footer>
     <!-- <v-bottom-navigation
       v-model="value"
@@ -94,5 +107,17 @@ export default {
       }
     },
   },
+  methods: {
+    goToHome() {
+      this.$router.push('/');
+    }
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+.footer {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+</style>

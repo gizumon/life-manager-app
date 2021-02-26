@@ -25,43 +25,38 @@
   </v-container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 
-export default {
-  data: () => ({
-    cards: [
-      {
+export default Vue.extend({
+  data() {
+    return {
+      cards: [{
         type: 'pay',
         title: 'Pay',
         src: 'https://i.postimg.cc/RVY35bL6/Pay.jpg',
         flex: 3,
-        href: '/input?type="pay"',
+        href: '/inputs?type=pay',
       },{
         type: 'todo',
         title: 'ToDo',
         src: 'https://i.postimg.cc/Jzz6y0fH/ToDo.jpg',
         flex: 3,
-        href: '/input?type="todo"',
+        href: '/inputs?type=todo',
       },{
         type: 'tobuy',
         title: 'ToBuy',
         src: 'https://i.postimg.cc/J7qz3765/To-BUY.jpg',
         flex: 3,
-        href: '/input?type="buy"',
+        href: '/inputs?type=tobuy',
       },{
         title: 'List',
         src: 'https://i.postimg.cc/j2xBqcKB/LIST.jpg',
         flex: 3,
-        href: '/view',
-      },
-      // {
-      //   title: 'Album',
-      //   src: 'https://cdn.pixabay.com/photo/2017/11/12/22/50/human-2944065_960_720.jpg',
-      //   flex: 2,
-      //   href: '/album',
-      // },
-    ],
-  }),
-}
-
+        href: '/views',
+      }]
+    };
+  }
+});
 </script>
+
