@@ -13,7 +13,7 @@
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="desserts"
+      :items="items"
       :search="search"
       fixed-header
     ></v-data-table>
@@ -37,7 +37,7 @@
           { text: '👤', value: 'payedBy' },
           { text: '❔', value: 'what' },
         ],
-        desserts: [
+        items: [
           {
             name: 'Shoko',
             calories: 1500,
